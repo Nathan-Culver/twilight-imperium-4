@@ -34,3 +34,7 @@ test('victory is immediate on reaching target through Imperial, without waiting 
  let s=setup();s.phase='action';s.pending=null;s.active=0;s.players[0].strategies=[8];s.players[0].vp=9;s.planets.mr.owner=0;s=transact(s,{type:'primary',args:{card:8}});assert.equal(s.winner,0);assert.equal(s.phase,'finished');assert.equal(s.players[0].vp,10);
 });
 test('Mining Initiative uses the chosen planet resource value and Summit is not an Action card',()=>{let s=setup({faction:'hacan'});s.phase='action';s.active=0;s.pending=null;s.players[0].cards=['mining_initiative','summit'];s=transact(s,{type:'playCard',args:{card:'mining_initiative',planet:'kamdorn'}});assert.equal(s.players[0].tg,0);s.active=0;s.pending=null;assert.throws(()=>transact(s,{type:'playCard',args:{card:'summit'}}),/Action-timing/);});
+test('all six enabled factions place starting ground forces and structures on the correct home planets',()=>{
+ const expected={sol:{jord:[5,0,1]},hacan:{arretze:[1,0,1],hercant:[2,0,0],kamdorn:[1,0,0]},letnev:{arcprime:[0,0,1],wrenterra:[3,0,0]},jolnar:{jol:[2,1,0],nar:[0,1,1]},sardakk:{quinarra:[3,0,1],trenlak:[2,1,0]},xxcha:{archonren:[2,0,1],archontau:[2,1,0]}};
+ for(const[faction,planets]of Object.entries(expected)){const s=setup({faction});for(const[id,n]of Object.entries(planets))assert.deepEqual([s.planets[id].ground.length,s.planets[id].pds,s.planets[id].dock],n,faction+'/'+id);}
+});

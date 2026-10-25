@@ -1,5 +1,5 @@
 import {FACTIONS,TILES,PLANETS,TECHS,OBJECTIVES,SECRETS,UNIT_TYPES,LIMITS} from './data.js';
-import {decision,objectiveEligible,ownedPlanets,available,unit,spaceUnits,route,capacity,productionLimit,buildCost,unitsOf,fleetLimit,canResearch,neighbors,initiativeOrder,neighborPlayers} from './engine.js';
+import {decision,objectiveEligible,ownedPlanets,available,unit,spaceUnits,route,capacity,productionLimit,buildCost,unitsOf,fleetLimit,canResearch,neighbors,initiativeOrder,neighborPlayers} from './engine.js?v=0.1.1';
 const action=(s,type,args={})=>({type,player:decision(s).player,args});
 const rankTech=['gd','st','nm','amd','cv2','ac2','inf2','so2','hm','ps','dd2','dn2','exo2','cr2','ff2','pds2','sd2'];
 export function chooseTech(s,p){return rankTech.find(id=>canResearch(s,p,id))||Object.keys(TECHS).find(id=>canResearch(s,p,id)&&['PROPULSION','BIOTIC','CYBERNETIC','WARFARE','UNITUPGRADE'].some(c=>TECHS[id].types.includes(c)));}

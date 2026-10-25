@@ -1,4 +1,4 @@
-# Implementation checklist — v0.1.0
+# Implementation checklist — v0.1.1
 
 This is an initial core-systems preview. It is **not** the requested comprehensive, precise digital replication of every base-game mechanism and asset. The remaining work is substantial and is recorded here rather than hidden as house rules.
 

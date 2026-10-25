@@ -1,4 +1,4 @@
-import {validate} from './engine.js';
+import {validate} from './engine.js?v=0.1.1';
 const PREFIX='ti4-situation-room:';
 export function saveLocal(state,slot='autosave'){localStorage.setItem(PREFIX+slot,JSON.stringify({savedAt:new Date().toISOString(),state}));}
 export function readLocal(slot='autosave'){const raw=localStorage.getItem(PREFIX+slot);if(!raw)return null;const x=JSON.parse(raw);validate(x.state);return x;}

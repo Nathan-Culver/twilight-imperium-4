@@ -1,5 +1,5 @@
 export * from './catalogue.js';
-export const VERSION='0.1.0';
+export const VERSION='0.1.1';
 export const COLORS=['#71c8e9','#db9670','#b097e4','#e57485','#79bba3','#d8bd6a'];
 export const STRATEGIES=[null,
  {name:'Leadership',color:'#e0707b',primary:'Gain 3 command tokens. Buy more for 3 influence each.',secondary:'Buy command tokens for 3 influence each; no strategy token cost.'},

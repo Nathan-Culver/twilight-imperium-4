@@ -95,7 +95,7 @@ export function createGame({count=3,faction='sol',opponents=[],difficulty='norma
   const home=TILES[FACTIONS[f].homeSystem].planets;
   for(const part of FACTIONS[f].startingFleet.split(',')){
    const m=part.trim().match(/^(\d+)?\s*(cv|cr|dd|dn|ff|inf|sd|pds|ws)(?:\s+(.*))?$/);if(!m)continue;const n=Number(m[1]||1),type=short[m[2]],abbr=m[3]?.trim();
-   const planet=home.find(id=>id.startsWith(abbr||'!')||PLANETS[id].name.toLowerCase().replace(/[^a-z0-9]/g,'').startsWith((abbr||'!').replace(/\s/g,'')))||home[0],pl=s.planets[planet];
+   const planet=home.find(id=>id===({at:'archontau',ar:'archonren'}[abbr]))||home.find(id=>id.startsWith(abbr||'!')||PLANETS[id].name.toLowerCase().replace(/[^a-z0-9]/g,'').startsWith((abbr||'!').replace(/\s/g,'')))||home[0],pl=s.planets[planet];
    if(type==='pds')pl.pds+=n;else if(type==='spacedock')pl.dock+=n;else if(type==='infantry')for(let i=0;i<n;i++)pl.ground.push(addUnit(s,type,p));else for(let i=0;i<n;i++)s.systems[s.players[p].home].ships.push(addUnit(s,type,p));
   }
  }

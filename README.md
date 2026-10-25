@@ -1,5 +1,7 @@
 # Twilight Imperium IV · The Situation Room
 
+[Play the browser preview](https://nathan-culver.github.io/twilight-imperium-4/)
+
 An unofficial, mobile-first **core-systems preview** of the base fourth-edition board game. Original browser implementation and original scalable vector artwork. This is not an exhaustive or certified rules implementation.
 
 The initial build has six enabled civilizations (Sol, Hacan, Letnev, Jol-Nar, Sardakk N’orr and Xxcha), 3–6-player official preset maps, local Easy/Normal/Hard heuristic AI, strategy and tactical decisions, production, research, objectives, saves, touch navigation and contextual help.

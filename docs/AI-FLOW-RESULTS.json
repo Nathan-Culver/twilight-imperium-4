@@ -43,11 +43,11 @@
     {
       "count": 4,
       "difficulty": "easy",
-      "steps": 1022,
+      "steps": 1013,
       "round": 9,
       "winner": 3,
       "scores": [
-        5,
+        7,
         3,
         8,
         10
@@ -57,13 +57,13 @@
     {
       "count": 4,
       "difficulty": "normal",
-      "steps": 1033,
+      "steps": 1075,
       "round": 9,
-      "winner": 1,
+      "winner": 0,
       "scores": [
-        6,
         8,
-        4,
+        8,
+        6,
         2
       ],
       "error": null
@@ -71,13 +71,13 @@
     {
       "count": 4,
       "difficulty": "hard",
-      "steps": 944,
-      "round": 8,
+      "steps": 1194,
+      "round": 9,
       "winner": 2,
       "scores": [
         6,
-        5,
-        10,
+        4,
+        9,
         1
       ],
       "error": null
@@ -85,7 +85,7 @@
     {
       "count": 5,
       "difficulty": "easy",
-      "steps": 1216,
+      "steps": 1174,
       "round": 9,
       "winner": 0,
       "scores": [
@@ -93,7 +93,7 @@
         4,
         2,
         2,
-        4
+        3
       ],
       "error": null
     },
@@ -115,7 +115,7 @@
     {
       "count": 5,
       "difficulty": "hard",
-      "steps": 974,
+      "steps": 973,
       "round": 8,
       "winner": 0,
       "scores": [
@@ -146,15 +146,15 @@
     {
       "count": 6,
       "difficulty": "normal",
-      "steps": 1265,
-      "round": 9,
+      "steps": 1087,
+      "round": 8,
       "winner": 0,
       "scores": [
-        8,
+        10,
         5,
-        3,
+        2,
         7,
-        3,
+        2,
         3
       ],
       "error": null
